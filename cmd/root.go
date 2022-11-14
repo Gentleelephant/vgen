@@ -4,6 +4,7 @@ Copyright © 2022 NAME HERE <EMAIL ADDRESS>
 package cmd
 
 import (
+	"fmt"
 	"github.com/Gentleelephant/vgen/config"
 	"github.com/Gentleelephant/vgen/pkg/encode"
 	"os"
@@ -24,7 +25,8 @@ to quickly create a Cobra application.`,
 	// Uncomment the following line if your bare application
 	// has an action associated with it:
 	Run: func(cmd *cobra.Command, args []string) {
-		encode.EncodeBase64(config.Config2String())
+		base64 := encode.EncodeBase64(config.Config2String())
+		fmt.Println(base64)
 	},
 }
 

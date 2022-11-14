@@ -1,12 +1,11 @@
-config:
-  v: 1
-  ps: "233v2.com_45.120.216.114",
-  add: "45.120.216.114",
-  port: "42001",
-  id: "4fdb4d91-9f47-42ad-a30d-04775cd6c300",
-  aid: "0",
-  net: "tcp",
-  type: "none",
-  host: "",
-  path: "",
-  tls: ""
+v: 1
+ps: "233v2.com_45.120.216.114"
+add: "45.120.216.114"
+port: "42001"
+id: "4fdb4d91-9f47-42ad-a30d-04775cd6c300"
+aid: 0
+net: "tcp"
+type: "none"
+host: ""
+path: ""
+tls: ""

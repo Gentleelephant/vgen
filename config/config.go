@@ -12,17 +12,17 @@ var (
 )
 
 type Config struct {
-	V    string `json:"v,omitempty"`
-	Ps   string `json:"ps,omitempty""`
-	Add  string `json:"add,omitempty"`
-	Port string `json:"port,omitempty"`
-	Id   string `json:"id,omitempty"`
-	Aid  string `json:"aid,omitempty"`
-	Net  string `json:"net,omitempty"`
-	Type string `json:"type,omitempty"`
-	Host string `json:"host,omitempty"`
-	Path string `json:"path,omitempty"`
-	Tls  string `json:"tls,omitempty"`
+	V    int    `json:"v,omitempty" yaml:"v,omitempty"`
+	Ps   string `json:"ps,omitempty" yaml:"ps,omitempty"`
+	Add  string `json:"add,omitempty" yaml:"add,omitempty"`
+	Port string `json:"port,omitempty" yaml:"port,omitempty"`
+	Id   string `json:"id,omitempty" yaml:"id,omitempty"`
+	Aid  int    `json:"aid,omitempty" yaml:"aid,omitempty"`
+	Net  string `json:"net,omitempty" yaml:"net,omitempty"`
+	Type string `json:"type,omitempty" yaml:"type,omitempty"`
+	Host string `json:"host,omitempty" yaml:"host,omitempty"`
+	Path string `json:"path,omitempty" yaml:"path,omitempty"`
+	Tls  string `json:"tls,omitempty" yaml:"tls,omitempty"`
 }
 
 func loadConfig() *Config {
@@ -35,10 +35,10 @@ func loadConfig() *Config {
 	}
 	var config Config
 	err = yaml.Unmarshal(file, &config)
+	fmt.Printf("%+v\n", config)
 	if err != nil {
 		panic(err)
 	}
-	fmt.Println(config)
 	return &config
 }
 
